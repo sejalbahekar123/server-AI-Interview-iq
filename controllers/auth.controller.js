@@ -52,7 +52,7 @@ export const googleAuth = async (req, res) => {
                 email
             });
         }
-
+console.log("user" , user)
         const token = await genToken(user._id);
 
         res.cookie("token", token, {
